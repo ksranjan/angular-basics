@@ -20,5 +20,4 @@ class="form-control"
 
 <!--ngIf is a structural directive. i.e it changes the structure, its not hidden. Therefore * is placed ahead-->
 <p *ngIf = "serverCreated">New server was created. Server name is {{serverName}}</p>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
