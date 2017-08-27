@@ -2,7 +2,10 @@
 <!--Don't mix String interpolation with poperty Binding-->
 <!--The value for a property in double quotes can be any typescript expression-->
 <!--Do not put curly braces there-->
-<button class="btn-primary" [disabled] = "!allowNewServer">Add Server</button>
-<p [innerText] = "allowNewServer"></p>
+<button class="btn-primary"
+        [disabled] = "!allowNewServer"
+        (click)="onCreateServer()">Add Server</button>
+<!--<p [innerText] = "allowNewServer"></p>-->
+<p> {{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
